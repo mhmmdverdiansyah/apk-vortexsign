@@ -1,0 +1,18 @@
+# Android Build
+*.apk
+*.aab
+*.dex
+*.class
+
+# Build folders
+/build/
+/app/build/
+.gradle/
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store

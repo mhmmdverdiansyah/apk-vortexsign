@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Lingkaran luar (ring tipis ungu pastel) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,18 m-34,34 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0"
+        android:strokeColor="#C4A8E8"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.30"/>
+
+    <!-- Lingkaran tengah (fill ungu sangat gelap) -->
+    <path
+        android:fillColor="#1E0F35"
+        android:pathData="M54,52 m-28,0 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0"/>
+
+    <!-- Ring tengah tipis -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,52 m-28,0 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0"
+        android:strokeColor="#B89EDC"
+        android:strokeWidth="0.8"
+        android:strokeAlpha="0.25"/>
+
+    <!-- Ring dalam tipis -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,52 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0"
+        android:strokeColor="#B89EDC"
+        android:strokeWidth="0.5"
+        android:strokeAlpha="0.12"/>
+
+    <!-- Aksen sudut kanan atas (bracket) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M82,12 L94,12"
+        android:strokeColor="#7B5AB5"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.50"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M94,12 L94,24"
+        android:strokeColor="#7B5AB5"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.50"/>
+
+    <!-- Aksen sudut kiri bawah (bracket) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M14,84 L26,84"
+        android:strokeColor="#7B5AB5"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.50"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M14,84 L14,96"
+        android:strokeColor="#7B5AB5"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.50"/>
+
+    <!-- Tombol play (segitiga ungu pastel) -->
+    <!-- Titik: kiri-atas(44,40), kiri-bawah(44,64), kanan-tengah(66,52) -->
+    <path
+        android:fillColor="#D4B8F4"
+        android:pathData="M44,40 L44,64 L66,52 Z"/>
+
+    <!-- Teks "VP" watermark pojok kanan bawah -->
+    <!-- Tidak bisa pakai <text> di Vector Drawable, diganti shape tipografi manual -->
+    <!-- Garis V kiri -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M78,84 L81,93 L84,84"
+        android:strokeColor="#4A2A7A"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeAlpha="0.45"/>
+    <!-- Garis P (batang vertikal) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M87,84 L87,93"
+        android:strokeColor="#4A2A7A"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.45"/>
+    <!-- Garis P (kepala atas) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M87,84 Q92,84 92,87 Q92,90 87,90"
+        android:strokeColor="#4A2A7A"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.45"/>
+
+</vector>
