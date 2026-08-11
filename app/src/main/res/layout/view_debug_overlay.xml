@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/overlay_bg_transparent"
+    android:padding="12dp"
+    android:minWidth="360dp"
+    android:elevation="6dp">
+
+    <!-- Header Ungu Pastel -->
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/overlay_header_purple"
+        android:padding="8dp"
+        android:text="VORTEX SYSTEM INFO"
+        android:textColor="@color/overlay_text_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <Space android:layout_width="match_parent" android:layout_height="10dp" />
+
+    <!-- Info Device & Network -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <TextView android:text="Status:" android:textColor="#8899AA" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tv_status_net" android:text="ONLINE" android:textColor="#00E676" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+
+        <TextView android:text="IP Address:" android:textColor="#8899AA" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tv_ip" android:text="-" android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+
+        <TextView android:text="Playlist:" android:textColor="#8899AA" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tv_playlist" android:text="Loading..." android:textColor="#FFFFFF" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+
+        <TextView android:text="Playing:" android:textColor="#8899AA" android:textSize="14sp" android:layout_marginEnd="12dp" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tv_playing" android:text="-" android:textColor="#00B0FF" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+
+    </GridLayout>
+
+    <Space android:layout_width="match_parent" android:layout_height="10dp" />
+
+    <!-- Area Log (Background Gelap Transparan) -->
+    <TextView
+        android:id="@+id/tv_logs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1AFFFFFF"
+        android:padding="8dp"
+        android:text="> System Ready\n> Waiting for content..."
+        android:textColor="@color/log_green"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:lineSpacingMultiplier="1.2" />
+</LinearLayout>

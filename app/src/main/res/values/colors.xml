@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="overlay_header_purple">#8A00FF</color> <!-- Ungu Pastel -->
+    <color name="overlay_text_dark">#1A1226</color>    <!-- Teks Gelap untuk Header -->
+    <color name="overlay_bg_transparent">#B3000000</color> <!-- Hitam Transparan -->
+    <color name="log_green">#A5D6A7</color>
 </resources>

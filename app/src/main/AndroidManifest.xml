@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.vortexsign_tv">
 
-    <!-- Deklarasi sebagai Android TV app — wajib agar muncul di home TV -->
+    <!-- Deklarasi sebagai Android TV app -->
     <uses-feature
         android:name="android.software.leanback"
         android:required="false" />
@@ -12,13 +12,8 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -30,7 +25,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
 
-        <!-- Splash Screen: entry point pertama saat app dibuka -->
+        <!-- SplashActivity sekaligus HOME LAUNCHER — otomatis jalan saat TV boot -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -40,10 +35,11 @@
             android:theme="@style/Theme.VortexsignTv.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!-- Launcher untuk HP/tablet biasa -->
                 <category android:name="android.intent.category.LAUNCHER" />
-                <!-- Launcher untuk Android TV — wajib agar muncul di home TV -->
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!-- HOME = app ini adalah launcher, dijalankan otomatis saat boot -->
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -53,28 +49,6 @@
             android:exported="false"
             android:theme="@style/Theme.VortexsignTv" />
 
-        <!-- Boot Receiver: auto-start saat TV dinyalakan / restart -->
-        <receiver
-            android:name=".BootReceiver"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-            <intent-filter android:priority="1000">
-                <!-- Standard Android boot -->
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <!-- Xiaomi / Mi Box / beberapa TV Android -->
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <!-- Auto-start setelah APK diupdate -->
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-            </intent-filter>
-        </receiver>
-
-        <!-- Boot Service: foreground service yang menjamin app terbuka saat boot -->
-        <service
-            android:name=".BootService"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="mediaPlayback" />
     </application>
 
 </manifest>
